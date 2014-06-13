@@ -20,7 +20,7 @@ public class KillSwitchTask extends Task {
 	public void execute(final ImmutableMultimap<String, String> parameters, final PrintWriter out) throws Exception {
 
 		LOGGER.info("Consuming all memory to force OutOfMemoryError synthetically");
-		LOGGER.debug("Forcing error, {}", Arrays.asList(new byte[Integer.MAX_VALUE]));
+		LOGGER.debug("Forcing error, {}", Arrays.asList(new byte[Integer.MAX_VALUE], 0));
 	}
 
 }
